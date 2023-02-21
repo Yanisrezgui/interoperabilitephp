@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             attribution:
                 '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         }).addTo(map);
-        L.marker([latPoint, longPoint]).addTo(map).bindPopup("Vous êtes ici");;
+        L.marker([latPoint, longPoint]).addTo(map).bindPopup("Vous êtes ici");
         
         //for each incident, add a marker on the map
         asyncCirculations().then((result) => {
