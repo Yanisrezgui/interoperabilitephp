@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interopérabilité Projet</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ville de Nancy</h1>
+        <div id="air">
+            <h2>Qualité de l'air</h2>
+            Dernière actualisation : <span id="date"></span> <br>
+            Qualité d'air : <span id="code"></span> soit <span id="qualite"></span> <br>
+        </div>
+        <h2>Les problèmes de circulation en temps réel</h2>
+        <div id="map"></div>
+        <h2>L'état de la pandémie Covid</h2>
+    </div>
+    <script src="circulations.js"></script>
+    <script src="air.js"></script>
+</body>
+</html>

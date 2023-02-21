@@ -1,0 +1,20 @@
+#map {
+    height: 75vh;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#air {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
