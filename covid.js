@@ -57,10 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
             let dateTab = []
             let hospTab = []
             let reaTab = []
+            let decestab = []
             covidData.forEach(element => {
                 dateTab.push(element.date)
                 hospTab.push(element.hosp)
                 reaTab.push(element.rea)
+                decestab.push(element.dchosp)
             });
             console.log(dateTab)
             const graph1 = document.getElementById('hosp').getContext('2d');
@@ -87,6 +89,21 @@ document.addEventListener("DOMContentLoaded", function () {
                     datasets: [{
                         label: 'Réanimations',
                         data: reaTab
+                    },]
+                },
+                // Configuration options go here
+                options: {
+                }
+            },);
+            const graph3 = document.getElementById('deces').getContext('2d');
+            new Chart(graph3, {
+                type: 'line',
+                // The data for our dataset
+                data: {
+                    labels: dateTab,
+                    datasets: [{
+                        label: 'Décès',
+                        data: decestab
                     },]
                 },
                 // Configuration options go here
