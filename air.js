@@ -1,5 +1,4 @@
 let date = document.getElementById("date");
-let code = document.getElementById("code");
 let qualite = document.getElementById("qualite");
 
 //fetch data from API (get AQI(Air Quality Programmatic) in Nancy)
@@ -38,8 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let month = closestTime.substr(4, 3);
                 let year = closestTime.substr(11, 4);
                 date.innerHTML = day + " " + month + " " + year;
-                code.innerHTML = element.attributes.code_qual;
-                qualite.innerHTML = element.attributes.lib_qual;
+                qualite.innerHTML = '<strong>' + element.attributes.lib_qual + '</strong>';
             }
         });
     });
