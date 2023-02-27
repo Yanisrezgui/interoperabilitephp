@@ -1,4 +1,3 @@
-
 function convertCSVToJSON(csvData) {
     const lines = csvData.split('\n');
     const headers = lines[0].split(',');
@@ -53,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('departement').innerHTML = dep
         asyncCovid().then((data) => {
             const covidData = data.filter((item) => item.dep === dep);
-            console.log(covidData)
             let dateTab = []
             let hospTab = []
             let reaTab = []
@@ -64,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 reaTab.push(element.rea)
                 decestab.push(element.dchosp)
             });
-            console.log(dateTab)
             const graph1 = document.getElementById('hosp').getContext('2d');
             new Chart(graph1, {
                 type: 'line',
